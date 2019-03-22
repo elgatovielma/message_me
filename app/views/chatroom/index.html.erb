@@ -1,1 +1,51 @@
-<h1>This is the index welcome</h1>
+<h4 class="ui center aligned medium icon header">
+    <i class="circular purple coffee icon"></i>
+    Say something
+  </h4>
+
+<div class="ui two column grid">
+
+    <div class="twelve wide column">
+            <div class="ui fluid raised card chatbox">
+                <div class="content">
+
+                    <div class="ui feed">
+                        <!--It will iterate the messages-->
+                        <!--We use another file to save space-->
+                        <!--In the views folder it was created a messages folder-->
+                        <%= render @messages %> 
+                    </div>  
+
+                </div>
+            <div class="extra content">
+                <form class="ui reply form">
+                    <div class="field">
+                        <div class="ui fluid icon input">
+                                <input type="text" placeholder="Enter a message...">
+                            <i class="bordered inverted blue edit icon"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="four wide column">
+        <div class="ui fluid raised card chatbox">
+            <div class="content">
+                <div class="ui blue inverted vertical menu">
+                    <a class="item">
+                    Home
+                    </a>
+                    <a class="item">
+                    Messages
+                    </a>
+                    <a class="item">
+                    Friends
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
