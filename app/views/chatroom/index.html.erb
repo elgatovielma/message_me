@@ -7,9 +7,9 @@
 
     <div class="twelve wide column">
             <div class="ui fluid raised card chatbox">
-                <div class="content">
+                <div class="content" id="messages">
 
-                    <div class="ui feed">
+                    <div class="ui feed" id="message-container">
                         <!--It will iterate the messages-->
                         <!--We use another file to save space-->
                         <!--In the views folder it was created a messages folder-->
@@ -19,7 +19,8 @@
                 </div>
 
             <div class="extra content">
-                    <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f|%>
+                    <!--The remote: true lets use async JS (AJAX)-->
+                    <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f|%>
                     <div class="field">
                         <div class="ui fluid icon input">
                             <%= f.text_field :body %>

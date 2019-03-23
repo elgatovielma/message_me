@@ -22,3 +22,8 @@ li > a:hover {
     font-size: 1.2em;
     text-decoration: none;
 }
+
+#messages {
+    height: 15em;
+    overflow: auto;
+}
