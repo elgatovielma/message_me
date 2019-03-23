@@ -23,6 +23,14 @@ let scroll_bottom = () => {
   }
 }
 
+let submit_message = () => {
+  $("#message_body").on('keydown', e => {
+    if(e.KeyCode == 13){
+      $('button').click();
+    }
+  });
+}
+
 $(document).on('turbolinks:load', function(){
   
   $('.ui.dropdown').dropdown();
@@ -32,7 +40,8 @@ $(document).on('turbolinks:load', function(){
   });
 
   scroll_bottom();
-
+  submit_message();
+  
 })
 
 
